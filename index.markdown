@@ -21,6 +21,10 @@ layout: default
     <ul style="padding-left: 20px; line-height: 1.8;">
       <li>
         <strong>2026-01-05:</strong> <br>
+        ✈️ 唐展通将于1.14日前往广东参加会议。
+      </li>
+      <li style="margin-top: 15px;">
+        <strong>2026-01-05:</strong> <br>
         🎉 我们的实验室网站正式上线了！
       </li>
       <li style="margin-top: 15px;">
@@ -44,7 +48,7 @@ layout: default
     
     <div style="margin-bottom: 15px;">
         <a href="#" style="font-weight: bold; color: #333; text-decoration: none;">Zygotic Genome Activation in Vertebrates</a>
-        <div style="font-size: 12px; color: #666; margin-top: 4px;">Jukam D, Shariati SAM, Skotheim JM., <i>Cell Reports</i> (2023)</div>
+        <div style="font-size: 12px; color: #666; margin-top: 4px;">Jukam D, Shariati SAM, Skotheim JM., <i>Dev Cell.</i> (2017)</div>
     </div>
   </div>
 
