@@ -164,3 +164,33 @@ body::before {
 .page-content, .wrapper {
   background: transparent !important;
 }
+/* 优化左上角 LOGO */
+.site-title {
+  font-family: 'Times New Roman', Times, serif !important; /* 切换为经典衬线体 */
+  font-weight: bold;
+  font-size: 26px !important;
+  letter-spacing: 1px; /* 字母间距稍微拉开一点 */
+  color: #333 !important;
+}
+
+/* 鼠标放上去变色 */
+.site-title:hover {
+  color: #4a90e2 !important; /* 悬浮变成实验室蓝 */
+  text-decoration: none;
+}
+/* 美化常用链接按钮 */
+.hover-card ul li a {
+  background: #fff !important; /* 变回白色背景 */
+  border: 1px solid #e0e0e0; /* 加上淡淡的边框 */
+  transition: all 0.3s ease;
+  color: #555 !important;
+  font-weight: 500;
+}
+
+/* 鼠标放上去的效果 */
+.hover-card ul li a:hover {
+  border-color: #50e3c2; /* 边框变绿 */
+  color: #50e3c2 !important; /* 文字变绿 */
+  background: #f9fffd !important; /* 背景微微变绿 */
+  padding-left: 15px !important; /* 只有这一行稍微动一下，产生位移感 */
+}
