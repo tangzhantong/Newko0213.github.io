@@ -4,7 +4,14 @@ title: "👥 Team"
 permalink: /members/
 ---
 
+<div style="text-align: center; margin-bottom: 40px; color: #666; font-style: italic; font-size: 16px;">
+  <p>
+    🏳️‍🌈秉持多元、平等与包容（DEI）理念，反对任何形式的歧视，尊重性别平等与多元性取向。<br>
+  </p>
+</div>
+
 <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+
 
   <div style="text-align: center; width: 220px;">
     <img src="/assets/images/memberzhantong.jpg" alt="唐展通" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #eee;">
