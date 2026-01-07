@@ -95,7 +95,7 @@ permalink: /gallery/
     <div class="gallery-info">
       <h3 class="gallery-title">新的家👋</h3>
       <p class="gallery-desc">
-        2025年1月，大宝刚到家，对一切的充满好奇。
+        2025年1月，大宝刚到家，对一切都充满好奇。
       </p>
     </div>
   </div>
