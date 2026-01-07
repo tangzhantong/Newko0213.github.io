@@ -85,7 +85,7 @@ permalink: /gallery/
     <div class="gallery-info">
       <h3 class="gallery-title">Sleep😴</h3>
       <p class="gallery-desc">
-        2025年8月，大宝：别放我发现了！。
+        2025年8月，大宝：别被我发现了！
       </p>
     </div>
   </div>
