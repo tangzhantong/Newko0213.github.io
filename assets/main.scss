@@ -272,51 +272,52 @@ input[type="text"], textarea {
   opacity: 1;                /* 变不透明 */
 }
 
-/* /* --- 2D 开屏帷幕样式 --- */
+/* --- 2D 开屏帷幕样式 (最终修正版) --- */
 #curtain-overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  /* 原来的 background 删掉，换成下面这两行 */
 
-  /* 解释：这里用了两层背景。
-     第一层是 rgba(0,0,0,0.4) 的半透明黑色遮罩，为了防止图片太亮看不清文字。
-     第二层 url(...) 才是你的图片。 */
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/images/banner_human-chromosomes.jpg');
+  /* ✅ 核心修改：背景图路径已修复，移除多余的 .jpg */
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/images/banner-biology-picture.jpg');
 
-  /* 关键属性：确保图片铺满全屏，不留黑边 */
+  /* 关键属性：确保图片铺满全屏 */
   background-size: cover;
   background-position: center;
+
   z-index: 99999;
   display: flex; justify-content: center; align-items: center;
   color: #ffffff;
   transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
+/* 帷幕拉起时的状态 */
 #curtain-overlay.curtain-up {
   transform: translateY(-100%);
 }
 
+/* 内容容器动画 */
 .curtain-content {
   text-align: center;
   animation: fadeInUp 1s ease-out 0.5s backwards;
 }
 
+/* 标题样式 (保留了渐变字效果) */
 .lab-title {
   font-size: 4rem; font-weight: 800; letter-spacing: 5px; margin-bottom: 10px;
   text-transform: uppercase;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/images/banner-biology-picture.jpg');
-
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(to right, #fff, #a0c4ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+/* 副标题、分割线、描述样式 */
 .lab-subtitle { font-size: 1.5rem; font-weight: 300; opacity: 0.9; margin-bottom: 30px; }
 .lab-divider { width: 60px; height: 3px; background: #a0c4ff; margin: 20px auto; }
 .lab-description { font-size: 1.1rem; opacity: 0.7; margin-bottom: 50px; font-family: sans-serif; }
 
+/* 按钮样式 */
 #enter-button {
   padding: 15px 40px; background: transparent; border: 2px solid rgba(255, 255, 255, 0.5);
   color: #fff; font-size: 1.1rem; border-radius: 50px; cursor: pointer;
@@ -331,6 +332,7 @@ input[type="text"], textarea {
 #enter-button:hover .btn-arrow { transform: translateY(3px); }
 .btn-arrow { transition: transform 0.3s ease; }
 
+/* 进场动画定义 */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
