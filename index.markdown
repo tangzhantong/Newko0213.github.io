@@ -124,7 +124,7 @@ function showSlides() {
 
       <li>
         <strong>2026-01-09:</strong> <br>
-        ✈️ 唐展通将于1.19日，1.20日参加日本国立遗传学研究所/SOKENDAI遗传学课程的博士入学考试，祝一起顺利！
+        ✈️ 唐展通将于1.19日，1.20日参加日本国立遗传学研究所/SOKENDAI遗传学课程的博士入学考试，祝一切顺利！
       </li>
       <li>
         <strong>2026-01-06:</strong> <br>
@@ -132,11 +132,11 @@ function showSlides() {
       </li>
       <li>
         <strong>2026-01-05:</strong> <br>
-        ✈️ 唐展通将于1.14日前往广东参加会议。
+        ✈️ 唐展通将于1.14日前往广东参加广州国家实验室-中山大学联合培养博士面试，祝一切顺利！
       </li>
       <li style="margin-top: 15px;">
         <strong>2026-01-05:</strong> <br>
-        🎉 我们的实验室网站正式上线了！
+        🎉 我们的个人网站正式上线了！
       </li>
       <li style="margin-top: 15px;">
         <strong>2025-12-31:</strong> <br>
