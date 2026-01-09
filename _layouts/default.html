@@ -3,8 +3,49 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body {% if page.url == "/" %}style="overflow: hidden;"{% endif %}>
 
+    {% if page.url == "/" %}
+    <div id="curtain-overlay">
+      <div class="curtain-content">
+        <h1 class="lab-title">Tang Zhantong</h1>
+        <p class="lab-subtitle">National Institute of Genetics</p>
+
+        <div class="lab-divider"></div>
+
+        <p class="lab-description">Exploring Developmental Biology & Physical Dynamics</p>
+
+        <button id="enter-button">
+          <span class="btn-text">Enter Laboratory</span>
+          <span class="btn-arrow">↓</span>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // 脚本：处理帷幕的点击和消失
+      document.addEventListener("DOMContentLoaded", () => {
+        const enterBtn = document.getElementById('enter-button');
+        const curtain = document.getElementById('curtain-overlay');
+        const body = document.body;
+
+        if (enterBtn) {
+            enterBtn.addEventListener('click', () => {
+              // 1. 触发向上拉起的 CSS 动画
+              curtain.classList.add('curtain-up');
+
+              // 2. 恢复页面的滚动功能
+              body.style.overflow = 'auto';
+
+              // 3. 0.8秒动画结束后，彻底隐藏元素
+              setTimeout(() => {
+                curtain.style.display = 'none';
+              }, 800);
+            });
+        }
+      });
+    </script>
+    {% endif %}
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
@@ -24,51 +65,9 @@
           <path d="M10 40 Q 20 40, 30 35 Q 40 15, 60 20 Q 70 25, 80 35 Q 90 40, 95 30 M 92 32 Q 94 34, 96 32 M 92 35 Q 94 37, 96 35 M 15 40 L 15 45 M 35 38 L 35 43 M 65 28 L 65 33 M 85 38 L 85 43 M 5 40 L 40 40" />
         </svg>
     </div>
+
     {%- include footer.html -%}
 
   </body>
-<body style="overflow: hidden;"> {% if page.url == "/" %}
-    <div id="curtain-overlay">
-      <div class="curtain-content">
-        <h1 class="lab-title">Tang Zhantong</h1>
-        <p class="lab-subtitle">National Institute of Genetics</p>
 
-        <div class="lab-divider"></div>
-
-        <p class="lab-description">Exploring Developmental Biology & Physical Dynamics</p>
-
-        <button id="enter-button">
-          <span class="btn-text">Enter Laboratory</span>
-          <span class="btn-arrow">↓</span>
-        </button>
-      </div>
-    </div>
-
-    <script>
-      // 等待页面加载完成
-      document.addEventListener("DOMContentLoaded", () => {
-        const enterBtn = document.getElementById('enter-button');
-        const curtain = document.getElementById('curtain-overlay');
-        const body = document.body;
-
-        // 监听点击事件
-        enterBtn.addEventListener('click', () => {
-          // 1. 给帷幕添加一个类名，触发 CSS 动画（向上滑动）
-          curtain.classList.add('curtain-up');
-
-          // 2. 恢复页面的滚动功能
-          body.style.overflow = 'auto';
-
-          // 3. 动画结束后 (0.8秒后)，彻底隐藏帷幕元素，避免挡住鼠标交互
-          setTimeout(() => {
-            curtain.style.display = 'none';
-          }, 800); // 这里的 800 必须和 CSS 里的 transition 时间一致
-        });
-      });
-    </script>
-    {% else %}
-      <script>document.body.style.overflow = 'auto';</script>
-    {% endif %}
-    {%- include header.html -%}
-    ```
 </html>
