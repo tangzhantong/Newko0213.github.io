@@ -1,64 +1,138 @@
 ---
-layout: page
-title: "🧬 Research"
+layout: default
+title: "Research"
 permalink: /research/
 ---
 
 <style>
-  /* 图片样式：圆角、阴影、宽度自适应 */
-  .research-banner-img {
+/* --- 1. 导航栏透明化 (沉浸式效果) --- */
+header.site-header {
+    position: absolute !important;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 300px;         /* 高度固定，显得整齐 */
-    object-fit: cover;     /* 保证图片裁剪不变形 */
-    border-radius: 8px;    /* 圆角 */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 淡淡的阴影 */
-    margin-bottom: 40px;   /* 图片和下方文字的间距 */
-  }
+    background-color: transparent !important;
+    border-bottom: none !important;
+    z-index: 1000;
+}
+.site-title, .site-title:visited, .site-nav .page-link {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.site-nav .menu-icon svg path { fill: #ffffff !important; }
 
-  /* 正文容器样式 */
-  .research-content {
-    font-size: 18px;       /* 字号加大，阅读更舒服 */
-    line-height: 1.9;      /* 行间距宽松 */
-    color: #2c3e50;        /* 深灰蓝色字体 */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  }
+/* --- 2. Hero Banner --- */
+.hero-wrapper {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: -60px; /* 抵消顶部间距 */
+    margin-bottom: 60px;
+}
+.hero-banner {
+    width: 100%;
+    height: 450px;
+    background-image: url('/assets/images/sunny.jpg'); /* 建议：换一张显微镜或细胞结构图 */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255,255,255,0.6);
+    padding-top: 15px;
+    display: inline-block;
+}
 
-  /* 标题样式 */
-  h2 {
-    color: #0366d6;        /* 科技蓝标题 */
-    border-bottom: 2px solid #eaecef;
-    padding-bottom: 10px;
-    margin-top: 40px;      /* 标题上方多留点白 */
-    font-weight: 600;
-  }
-  
-  /* 占位符文字颜色变淡 */
-  .placeholder-text {
+/* --- 3. 正文样式 --- */
+.content-section {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+.project-card {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 40px;
+}
+.project-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    border-left: 5px solid #4a90e2; /* 学术蓝 */
+    padding-left: 15px;
+    line-height: 1.3;
+}
+.project-desc {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+.placeholder-text {
     color: #999;
     font-style: italic;
-  }
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: block;
+}
+/* 隐藏默认 Footer */
+footer, .site-footer { display: none !important; }
 </style>
 
-
-<div>
-  <img src="/assets/images/bg-pattern.jpg" alt="Research Banner" class="research-banner-img">
+<div class="hero-wrapper">
+    <div class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">研究内容</h1>
+            <div class="hero-subtitle">
+                研究领域：生物物理学、染色质动力学、癌症生物学、胚胎基因组激活
+            </div>
+        </div>
+    </div>
 </div>
 
-
-<div class="research-content">
-
-  <h2>1. NQO1在铁死亡抵抗及索拉非尼耐药的研究</h2>
-  <p>
-    目前实验表明，NQO1 的高表达与肝癌细胞对索拉非尼的耐药性密切相关...
-    <br>
-    <span class="placeholder-text">(此处等待添加更多详细描述...)</span>
-  </p>
-
-  <h2>2. 小鼠胚胎细胞核力学改变与合子基因激活的研究</h2>
-  <p>
-    本课题旨在探索早期胚胎发育过程中，细胞核的物理力学特性如何影响基因组的激活...
-    <br>
-    <span class="placeholder-text">(此处等待添加更多详细描述...)</span>
-  </p>
+<div class="content-section">
+    <div class="project-card">
+        <h2 class="project-title">1. 小鼠胚胎细胞核力学改变与合子基因激活的研究</h2>
+        <div class="project-desc">
+            <p>
+                本课题旨在探索早期胚胎发育过程中，细胞核的物理力学特性（如硬度、形变能力）如何伴随合子基因激活（ZGA）发生动态变化。我们利用显微操作技术与活细胞成像...
+            </p>
+            <span class="placeholder-text">(敬请期待...)</span>
+        </div>
+    </div>
+    
 
 </div>

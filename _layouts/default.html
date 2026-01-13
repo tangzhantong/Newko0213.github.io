@@ -3,7 +3,7 @@
 
   {%- include head.html -%}
 
-  <body {% if page.url == "/" %}style="overflow: hidden;"{% endif %}>
+  <body>
 
     {%- include header.html -%}
 
@@ -13,60 +13,87 @@
       </div>
     </main>
 
-    <div class="footer-cats-container">
-        <svg class="footer-cat-svg" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 40 Q 25 20, 45 25 Q 65 30, 80 40 L 90 40 Q 95 35, 90 30 Q 85 25, 80 30 M 85 32 Q 87 34, 89 32 M 85 35 Q 87 37, 89 35 M 15 40 L 15 45 M 35 40 L 35 45 M 65 40 L 65 45 M 85 40 L 85 45 M 5 40 L 95 40" />
-        </svg>
-        <svg class="footer-cat-svg" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 40 Q 20 25, 50 25 Q 80 25, 90 40 M 15 35 Q 20 30, 25 35 M 12 40 L 12 42 M 88 40 L 88 42 M 5 40 L 95 40" />
-        </svg>
-        <svg class="footer-cat-svg" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 40 Q 20 40, 30 35 Q 40 15, 60 20 Q 70 25, 80 35 Q 90 40, 95 30 M 92 32 Q 94 34, 96 32 M 92 35 Q 94 37, 96 35 M 15 40 L 15 45 M 35 38 L 35 43 M 65 28 L 65 33 M 85 38 L 85 43 M 5 40 L 40 40" />
-        </svg>
+    <div style="text-align: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eaeaea; color: #666; font-size: 14px;">
+        zhantongtang@gmail.com
     </div>
 
-    {%- include footer.html -%}
+  </body>
+<style>
+/* ==========================================================================
+   全局智能颜色管理系统 (Smart Color & Cursor System)
+   ========================================================================== */
 
-    {% if page.url == "/" %}
-    <div id="curtain-overlay">
-      <div class="curtain-content">
-        <h1 class="lab-title">Tang Zhantong</h1>
-        <p class="lab-subtitle">National Institute of Genetics</p>
+/* --- 1. 定义光标资源 (Base64编码，无需上传图片) --- */
+:root {
+    /* 黑色光标 (用于浅色背景) - 系统默认或自定义 */
+    --cursor-dark: default;
 
-        <div class="lab-divider"></div>
+    /* 白色光标 (用于深色背景) - 纯白箭头带黑色描边，保证高对比度 */
+    --cursor-light: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 3.5L16.5 28.5L20.5 19.5L28.5 28.5L30.5 26.5L22.5 17.5L30.5 15.5L5.5 3.5Z" fill="white" stroke="black" stroke-width="1"/></svg>') 2 2, auto;
+}
 
-        <p class="lab-description">Exploring Developmental Biology & Physical Dynamics</p>
+/* --- 2. 默认区域 (浅色背景，深色文字/光标) --- */
+body {
+    background-color: #ffffff;
+    color: #333333;           /* 深灰黑色文字 */
+    cursor: var(--cursor-dark); /* 黑色光标 */
+}
 
-        <button id="enter-button">
-          <span class="btn-text">Enter Laboratory</span>
-          <span class="btn-arrow">↓</span>
-        </button>
-      </div>
-    </div>
+a {
+    color: #333333;           /* 链接默认黑色 */
+    text-decoration: none;
+    cursor: pointer;          /* 链接保持手型 */
+}
 
-    <script>
-      // 脚本：处理帷幕的点击和消失
-      document.addEventListener("DOMContentLoaded", () => {
-        const enterBtn = document.getElementById('enter-button');
-        const curtain = document.getElementById('curtain-overlay');
-        const body = document.body;
+/* --- 3. 深色区域自动化 (Hero Banner, Header) --- */
+/* 定义所有深色背景的容器类名 */
+.hero-banner,
+.hero-wrapper,
+.site-header,
+header[role="banner"] {
+    color: #ffffff !important;  /* 强制文字变白 */
+    cursor: var(--cursor-light) !important; /* 强制光标变白 */
+}
 
-        if (enterBtn) {
-            enterBtn.addEventListener('click', () => {
-              // 1. 触发向上拉起的 CSS 动画
-              curtain.classList.add('curtain-up');
+/* 深色区域内的所有子元素文字也变白 */
+.hero-banner *,
+.hero-wrapper *,
+.site-header * {
+    color: #ffffff !important;
+    fill: #ffffff !important;   /* SVG图标变白 */
+    border-color: rgba(255,255,255,0.8) !important; /* 边框变白 */
+}
 
-              // 2. 恢复页面的滚动功能
-              body.style.overflow = 'auto';
+/* 修复：深色区域内的链接悬停效果 */
+.hero-banner a:hover,
+.site-header a:hover {
+    opacity: 0.8; /* 悬停时稍微变透明，体现交互感 */
+}
 
-              // 3. 0.8秒动画结束后，彻底隐藏元素
-              setTimeout(() => {
-                curtain.style.display = 'none';
-              }, 800);
-            });
-        }
-      });
-    </script>
-    {% endif %}
-    </body>
+/* --- 4. 针对特定页面的微调 --- */
+
+/* 确保正文内容区域恢复为“浅色背景模式” */
+.page-content,
+.content-container,
+.research-section,
+.gallery-container,
+.code-container,
+.protocol-container,
+.member-container {
+    color: #333333 !important; /* 强制回黑色文字 */
+    cursor: var(--cursor-dark) !important; /* 强制回黑色光标 */
+}
+
+/* 正文区域内的链接恢复深色（排除按钮等特殊元素） */
+.page-content a:not(.btn),
+.content-container a:not(.btn) {
+    color: #000000 !important;
+}
+
+/* 正文区域的标题 */
+h1, h2, h3, h4, h5, h6 {
+    /* 这里的颜色由父元素决定，无需强制，
+       但在 .page-content 里它会自动继承上面的 #333 */
+}
+</style>
 </html>
