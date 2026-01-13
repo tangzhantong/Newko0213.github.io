@@ -61,6 +61,16 @@ permalink: /gallery/
 <div class="gallery-container">
 
   <div class="gallery-card">
+    <img src="/assets/images/dabao_new_bed.jpg" class="gallery-img" alt="Conference">
+    <div class="gallery-info">
+      <h3 class="gallery-title">新卧室😌</h3>
+      <p class="gallery-desc">
+        2026年1月，北方有些寒冷，父母为大宝准备了新的小房子（踩奶ing）
+      </p>
+    </div>
+  </div>
+
+  <div class="gallery-card">
     <img src="/assets/images/pic_haoyu_cat.jpg" class="gallery-img" alt="Conference">
     <div class="gallery-info">
       <h3 class="gallery-title">猫咖</h3>
