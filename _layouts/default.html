@@ -1,99 +1,123 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
+    <!-- 交互式粒子背景 -->
+    <div id="canvas-wrapper"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
+        <canvas id="constellation-canvas"></canvas>
+    </div>
+    <script src="/assets/js/constellation.js"></script>
 
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+        <div class="wrapper">
+            {{ content }}
+        </div>
     </main>
 
-    <div style="text-align: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eaeaea; color: #666; font-size: 14px;">
+    <div
+        style="text-align: center; margin: 40px 0; padding-top: 20px; border-top: 1px solid #eaeaea; color: #666; font-size: 14px;">
         zhantongtang@gmail.com
     </div>
 
-  </body>
+</body>
 <style>
-/* ==========================================================================
+    /* ==========================================================================
    全局智能颜色管理系统 (Smart Color & Cursor System)
    ========================================================================== */
 
-/* --- 1. 定义光标资源 (Base64编码，无需上传图片) --- */
-:root {
-    /* 黑色光标 (用于浅色背景) - 系统默认或自定义 */
-    --cursor-dark: default;
+    /* --- 1. 定义光标资源 (Base64编码，无需上传图片) --- */
+    :root {
+        /* 黑色光标 (用于浅色背景) - 系统默认或自定义 */
+        --cursor-dark: default;
 
-    /* 白色光标 (用于深色背景) - 纯白箭头带黑色描边，保证高对比度 */
-    --cursor-light: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 3.5L16.5 28.5L20.5 19.5L28.5 28.5L30.5 26.5L22.5 17.5L30.5 15.5L5.5 3.5Z" fill="white" stroke="black" stroke-width="1"/></svg>') 2 2, auto;
-}
+        /* 白色光标 (用于深色背景) - 纯白箭头带黑色描边，保证高对比度 */
+        --cursor-light: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 3.5L16.5 28.5L20.5 19.5L28.5 28.5L30.5 26.5L22.5 17.5L30.5 15.5L5.5 3.5Z" fill="white" stroke="black" stroke-width="1"/></svg>') 2 2, auto;
+    }
 
-/* --- 2. 默认区域 (浅色背景，深色文字/光标) --- */
-body {
-    background-color: #ffffff;
-    color: #333333;           /* 深灰黑色文字 */
-    cursor: var(--cursor-dark); /* 黑色光标 */
-}
+    /* --- 2. 默认区域 (浅色背景，深色文字/光标) --- */
+    body {
+        background-color: #ffffff;
+        color: #333333;
+        /* 深灰黑色文字 */
+        cursor: var(--cursor-dark);
+        /* 黑色光标 */
+    }
 
-a {
-    color: #333333;           /* 链接默认黑色 */
-    text-decoration: none;
-    cursor: pointer;          /* 链接保持手型 */
-}
+    a {
+        color: #333333;
+        /* 链接默认黑色 */
+        text-decoration: none;
+        cursor: pointer;
+        /* 链接保持手型 */
+    }
 
-/* --- 3. 深色区域自动化 (Hero Banner, Header) --- */
-/* 定义所有深色背景的容器类名 */
-.hero-banner,
-.hero-wrapper,
-.site-header,
-header[role="banner"] {
-    color: #ffffff !important;  /* 强制文字变白 */
-    cursor: var(--cursor-light) !important; /* 强制光标变白 */
-}
+    /* --- 3. 深色区域自动化 (Hero Banner, Header) --- */
+    /* 定义所有深色背景的容器类名 */
+    .hero-banner,
+    .hero-wrapper,
+    .site-header,
+    header[role="banner"] {
+        color: #ffffff !important;
+        /* 强制文字变白 */
+        cursor: var(--cursor-light) !important;
+        /* 强制光标变白 */
+    }
 
-/* 深色区域内的所有子元素文字也变白 */
-.hero-banner *,
-.hero-wrapper *,
-.site-header * {
-    color: #ffffff !important;
-    fill: #ffffff !important;   /* SVG图标变白 */
-    border-color: rgba(255,255,255,0.8) !important; /* 边框变白 */
-}
+    /* 深色区域内的所有子元素文字也变白 */
+    .hero-banner *,
+    .hero-wrapper *,
+    .site-header * {
+        color: #ffffff !important;
+        fill: #ffffff !important;
+        /* SVG图标变白 */
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        /* 边框变白 */
+    }
 
-/* 修复：深色区域内的链接悬停效果 */
-.hero-banner a:hover,
-.site-header a:hover {
-    opacity: 0.8; /* 悬停时稍微变透明，体现交互感 */
-}
+    /* 修复：深色区域内的链接悬停效果 */
+    .hero-banner a:hover,
+    .site-header a:hover {
+        opacity: 0.8;
+        /* 悬停时稍微变透明，体现交互感 */
+    }
 
-/* --- 4. 针对特定页面的微调 --- */
+    /* --- 4. 针对特定页面的微调 --- */
 
-/* 确保正文内容区域恢复为“浅色背景模式” */
-.page-content,
-.content-container,
-.research-section,
-.gallery-container,
-.code-container,
-.protocol-container,
-.member-container {
-    color: #333333 !important; /* 强制回黑色文字 */
-    cursor: var(--cursor-dark) !important; /* 强制回黑色光标 */
-}
+    /* 确保正文内容区域恢复为“浅色背景模式” */
+    .page-content,
+    .content-container,
+    .research-section,
+    .gallery-container,
+    .code-container,
+    .protocol-container,
+    .member-container {
+        color: #333333 !important;
+        /* 强制回黑色文字 */
+        cursor: var(--cursor-dark) !important;
+        /* 强制回黑色光标 */
+    }
 
-/* 正文区域内的链接恢复深色（排除按钮等特殊元素） */
-.page-content a:not(.btn),
-.content-container a:not(.btn) {
-    color: #000000 !important;
-}
+    /* 正文区域内的链接恢复深色（排除按钮等特殊元素） */
+    .page-content a:not(.btn),
+    .content-container a:not(.btn) {
+        color: #000000 !important;
+    }
 
-/* 正文区域的标题 */
-h1, h2, h3, h4, h5, h6 {
-    /* 这里的颜色由父元素决定，无需强制，
+    /* 正文区域的标题 */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        /* 这里的颜色由父元素决定，无需强制，
        但在 .page-content 里它会自动继承上面的 #333 */
-}
+    }
 </style>
+
 </html>
