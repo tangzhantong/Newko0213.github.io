@@ -6,14 +6,38 @@ permalink: /cn/news/
 ---
 
 <style>
+/* Header Styling for News Page */
+header.site-header {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent !important;
+    border-bottom: none !important;
+    z-index: 1000;
+}
+
+.site-title, 
+.site-title:visited,
+.site-nav .page-link {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.site-nav .menu-icon svg path {
+    fill: #ffffff !important;
+}
+
 .news-page-container {
     position: relative;
     min-height: 100vh;
     width: 100%;
+    /* Extend to top to be behind header */
+    margin-top: -60px; 
+    padding-top: 160px; /* More padding to account for header */
     /* Background Image */
     background: url("{{ '/assets/images/news_bg.jpg' | relative_url }}") no-repeat center center fixed;
     background-size: cover;
-    padding-top: 100px; /* Space for fixed header */
 }
 
 /* Semi-transparent overlay to make text readable */
