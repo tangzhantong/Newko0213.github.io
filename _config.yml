@@ -33,7 +33,7 @@ plugins:
 header_pages:
   - research.md
   - members.md
-  - protocol.md
+
   - gallery.md
   - address.md
 
