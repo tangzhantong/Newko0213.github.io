@@ -170,10 +170,10 @@ header.site-header {
 </style>
 
 <div class="slider-container">
-    <div class="slide active" style="background-image: url('/assets/images/home_bg_1.jpg');"></div>
-    <div class="slide" style="background-image: url('/assets/images/home_bg_2.jpg');"></div>
-    <div class="slide" style="background-image: url('/assets/images/home_bg_3.jpg');"></div>
-    <div class="slide" style="background-image: url('/assets/images/home_bg_4.jpg');"></div>
+    <div class="slide active" style="background-image: url('/assets/images/home_bg_1.jpg?v=2');"></div>
+    <div class="slide" style="background-image: url('/assets/images/home_bg_2.jpg?v=2');"></div>
+    <div class="slide" style="background-image: url('/assets/images/home_bg_3.jpg?v=2');"></div>
+    <div class="slide" style="background-image: url('/assets/images/home_bg_4.jpg?v=2');"></div>
     
     <div class="slider-overlay"></div>
     
