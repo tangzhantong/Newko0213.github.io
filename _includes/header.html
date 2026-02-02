@@ -19,8 +19,7 @@
       </label>
 
       <div class="trigger">
-        {%- assign is_en = page.url | contains: "/en/" -%}
-        {%- if is_en -%}
+        {%- if page.lang == "en" -%}
         <a class="page-link" href="/en/research/">Research</a>
         <a class="page-link" href="/en/members/">Team</a>
         <a class="page-link" href="/en/gallery/">Gallery</a>

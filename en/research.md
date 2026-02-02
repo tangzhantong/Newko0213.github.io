@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Research"
+lang: en
 permalink: /en/research/
 ---
 

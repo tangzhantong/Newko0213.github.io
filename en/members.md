@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Team"
+lang: en
 permalink: /en/members/
 ---
 

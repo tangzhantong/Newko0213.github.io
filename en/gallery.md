@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Gallery"
+lang: en
 permalink: /en/gallery/
 ---
 
