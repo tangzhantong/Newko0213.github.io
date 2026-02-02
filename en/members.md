@@ -60,7 +60,7 @@ footer, .site-footer { display: none !important; }
 <div class="hero-wrapper">
     <div class="hero-banner">
         <div class="hero-overlay"></div>
-        <h1 class="hero-title">成员介绍</h1>
+        <h1 class="hero-title">Team</h1>
     </div>
 </div>
 
