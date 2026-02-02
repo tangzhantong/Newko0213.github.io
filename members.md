@@ -43,6 +43,15 @@ header.site-header {
 .social-icon:hover svg.twitter { fill: #000000; }
 .social-icon:hover svg.instagram { fill: #E1306C; }
 .social-icon:hover svg.orcid { fill: #A6CE39; }
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 60px 0 30px;
+    color: #444;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
 footer, .site-footer { display: none !important; }
 </style>
@@ -58,6 +67,7 @@ footer, .site-footer { display: none !important; }
     <p>🏳️‍🌈 秉持多元、平等与包容（DEI）理念，反对任何形式的歧视，尊重性别平等与多元性取向。</p>
 </div>
 
+<h2 class="section-title">Family</h2>
 <div class="member-container">
 
   <div class="member-card">
@@ -94,6 +104,11 @@ footer, .site-footer { display: none !important; }
       <strong>爱好：</strong>健身、陪伴猫咪、烹饪(?)
     </div>
   </div>
+
+</div>
+
+<h2 class="section-title">Mascots</h2>
+<div class="member-container">
 
   <div class="member-card">
     <img src="/assets/images/memberdabao.jpg" alt="大宝" class="member-img">
