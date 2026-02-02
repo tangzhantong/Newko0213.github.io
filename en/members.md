@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Team"
-permalink: /members/
+permalink: /en/members/
 ---
 
 <style>

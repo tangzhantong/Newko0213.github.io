@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Contact"
-permalink: /address/
+permalink: /en/address/
 ---
 
 <style>
