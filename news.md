@@ -24,6 +24,11 @@ header.site-header {
     text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
+/* 覆盖默认的深色语言切换样式 */
+.lang-separator { color: #ffffff !important; }
+.lang-active { color: #ffffff !important; }
+.lang-inactive { color: #cccccc !important; }
+
 .site-nav .menu-icon svg path {
     fill: #ffffff !important;
 }

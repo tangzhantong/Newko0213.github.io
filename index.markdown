@@ -25,6 +25,11 @@ header.site-header {
     text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* 加一点阴影，防止背景太亮时看不清文字 */
 }
 
+/* 覆盖默认的深色语言切换样式 */
+.lang-separator { color: #ffffff !important; }
+.lang-active { color: #ffffff !important; }
+.lang-inactive { color: #cccccc !important; }
+
 /* 如果有 SVG 图标（如汉堡菜单），也改成白色 */
 .site-nav .menu-icon svg path {
     fill: #ffffff !important;
