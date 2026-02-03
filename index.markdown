@@ -1,5 +1,6 @@
 ---
 layout: default
+header_style: white
 lang: en
 ---
 
@@ -15,24 +16,6 @@ header.site-header {
     background-color: transparent !important; /* 背景透明 */
     border-bottom: none !important; /* 去掉底部的线 */
     z-index: 1000; /* 保证它在视频上面 */
-}
-
-/* 让导航栏里的文字变成白色 */
-.site-title, 
-.site-title:visited,
-.site-nav .page-link {
-    color: #ffffff !important;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* 加一点阴影，防止背景太亮时看不清文字 */
-}
-
-/* 覆盖默认的深色语言切换样式 */
-.lang-separator { color: #ffffff !important; }
-.lang-active { color: #ffffff !important; }
-.lang-inactive { color: #cccccc !important; }
-
-/* 如果有 SVG 图标（如汉堡菜单），也改成白色 */
-.site-nav .menu-icon svg path {
-    fill: #ffffff !important;
 }
 
 /* --- 2. 全屏视频背景 Hero Section --- */

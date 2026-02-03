@@ -3,6 +3,7 @@ layout: default
 title: News
 lang: en
 permalink: /news/
+header_style: white
 ---
 
 <style>
@@ -15,22 +16,6 @@ header.site-header {
     background-color: transparent !important;
     border-bottom: none !important;
     z-index: 1000;
-}
-
-.site-title, 
-.site-title:visited,
-.site-nav .page-link {
-    color: #ffffff !important;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-}
-
-/* 覆盖默认的深色语言切换样式 */
-.lang-separator { color: #ffffff !important; }
-.lang-active { color: #ffffff !important; }
-.lang-inactive { color: #cccccc !important; }
-
-.site-nav .menu-icon svg path {
-    fill: #ffffff !important;
 }
 
 .news-page-container {
