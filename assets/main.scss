@@ -1,339 +1,130 @@
 ---
-# Only the main Sass file needs front matter (the dashes are important)
 ---
 @charset "utf-8";
 
 @import "minima";
 
+/* --- custom partials --- */
+@import "hero";
+@import "nav-transparent";
+@import "footer-custom";
+@import "lightbox";
+@import "transitions";
+@import "responsive";
+
 /* =========================================
    Tang Lab 全局样式控制中心 (Global Styles)
    ========================================= */
 
-/* 1. 核心命令：强制加宽所有页面 */
 .wrapper {
-  max-width: 95% !important; /* 让内容占据屏幕 95% 的宽度 */
-  padding-left: 15px !important; /* 左右留一点点呼吸空间 */
+  max-width: 95% !important;
+  padding-left: 15px !important;
   padding-right: 15px !important;
 }
 
-/* 2. 针对 Research 等页面的图片优化 */
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px; /* 图片圆角，增加精致感 */
+  border-radius: 6px;
 }
 
-/* 3. 去掉页眉页脚多余的边框（让页面更干净） */
-.site-header, .site-footer {
+.site-header,
+.site-footer {
   border-top: none;
 }
 
-/* =========================================
-   Tang Lab 动效库 (Animation Library)
-   ========================================= */
-
-/* 1. 卡片悬浮效果 (用于底部的三栏) */
 .hover-card {
-  transition: all 0.3s ease; /* 0.3秒的平滑过渡 */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 默认有一点点阴影，增加质感 */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .hover-card:hover {
-  transform: translateY(-8px); /* 向上浮动 8像素 */
-  box-shadow: 0 12px 20px rgba(0,0,0,0.15); /* 阴影加深，制造立体感 */
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* 2. 滚动渐入效果 (初始隐藏状态) */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(30px); /* 初始位置在下方 30px */
-  transition: all 0.8s ease-out; /* 0.8秒缓慢浮出 */
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
 }
 
-/* 3. 滚动渐入效果 (激活显示状态) */
 .reveal-visible {
   opacity: 1;
-  transform: translateY(0); /* 回到原位 */
+  transform: translateY(0);
 }
-/* =========================================
-   Tang Lab 背景动效：微观世界 (Micro-World)
-   ========================================= */
-
-/* 背景容器：固定在屏幕最底层，不挡住任何内容 */
-.lab-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* 关键：置于最底层 */
-  overflow: hidden;
-  pointer-events: none; /* 关键：让鼠标点击穿透它，不影响点击按钮 */
-}
-
-/* 分子/细胞通用的样式 */
-.molecule {
-  position: absolute;
-  border-radius: 50%; /* 圆形 */
-  opacity: 0.15; /* 非常透明，若隐若现 */
-  filter: blur(8px); /* 边缘模糊，像显微镜失焦的感觉 */
-  animation: floatUp 25s infinite linear; /* 25秒的超慢浮动 */
-}
-
-/* 定义几种不同大小和颜色的分子 */
-.m-1 {
-  width: 80px;
-  height: 80px;
-  background: #4a90e2; /* 实验室蓝 */
-  left: 10%;
-  bottom: -100px;
-  animation-duration: 35s; /* 速度不同，制造层次感 */
-  animation-delay: 0s;
-}
-
-.m-2 {
-  width: 150px;
-  height: 150px;
-  background: #50e3c2; /* 青绿色 */
-  left: 25%;
-  bottom: -150px;
-  animation-duration: 45s;
-  animation-delay: 5s;
-}
-
-.m-3 {
-  width: 40px;
-  height: 40px;
-  background: #e24a4a; /* 红色点缀 */
-  left: 70%;
-  bottom: -50px;
-  animation-duration: 20s;
-  animation-delay: 2s;
-}
-
-.m-4 {
-  width: 100px;
-  height: 100px;
-  background: #4a90e2;
-  left: 85%;
-  bottom: -120px;
-  animation-duration: 40s;
-  animation-delay: 8s;
-}
-
-.m-5 {
-  width: 60px;
-  height: 60px;
-  background: #50e3c2;
-  left: 50%;
-  bottom: -80px;
-  animation-duration: 30s;
-  animation-delay: 15s;
-}
-
-/* =========================================
-   Tang Lab 全局背景纹理 (Universal Wallpaper)
-   ========================================= */
 
 body::before {
   content: "";
-  position: fixed; /* 固定定位：滚动页面时背景不动，很有高级感 */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
-  /* --- 在这里设置你的图片 --- */
   background-image: url('/assets/images/bg-pattern.jpg');
-
-  /* 如果你暂时没有图片，可以用下面这行代码生成一个“简易培养皿”效果作为测试（去掉注释即可使用）： */
-  /* background-image: radial-gradient(#e0e0e0 2px, transparent 2px), radial-gradient(#e0e0e0 2px, transparent 2px); background-position: 0 0, 25px 25px; background-size: 50px 50px; */
-
-  background-repeat: repeat; /* 平铺模式 */
-  background-size: 300px;    /* 控制图案的大小，数字越小图案越密 */
-
-  opacity: 0.08; /* 透明度：关键！0.05-0.1 之间最好，营造“水印”效果，不要抢了正文的风头 */
-  z-index: -1;   /* 置于最底层 */
-  pointer-events: none; /* 让鼠标穿透，不影响点击 */
-
-  /* 融合模式：让背景更自然地融入白色底色 */
+  background-repeat: repeat;
+  background-size: 300px;
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
   mix-blend-mode: multiply;
 }
 
-/* 确保页面主体背景是透明的，这样才能透出后面的纹理 */
-.page-content, .wrapper {
+.page-content,
+.wrapper {
   background: transparent !important;
 }
-/* 优化左上角 LOGO */
+
 .site-title {
-  font-family: 'Times New Roman', Times, serif !important; /* 切换为经典衬线体 */
+  font-family: 'Inter', 'Times New Roman', Times, serif !important;
   font-weight: bold;
   font-size: 26px !important;
-  letter-spacing: 1px; /* 字母间距稍微拉开一点 */
+  letter-spacing: 1px;
   color: #333 !important;
 }
 
-/* 鼠标放上去变色 */
 .site-title:hover {
-  color: #4a90e2 !important; /* 悬浮变成实验室蓝 */
+  color: #4a90e2 !important;
   text-decoration: none;
 }
-/* 美化常用链接按钮 */
-.hover-card ul li a {
-  background: #fff !important; /* 变回白色背景 */
-  border: 1px solid #e0e0e0; /* 加上淡淡的边框 */
-  transition: all 0.3s ease;
-  color: #555 !important;
-  font-weight: 500;
-}
 
-/* 鼠标放上去的效果 */
-.hover-card ul li a:hover {
-  border-color: #50e3c2; /* 边框变绿 */
-  color: #50e3c2 !important; /* 文字变绿 */
-  background: #f9fffd !important; /* 背景微微变绿 */
-  padding-left: 15px !important; /* 只有这一行稍微动一下，产生位移感 */
-}
-
-/* --- 高级简约箭头样式 (纯 CSS) --- */
-
-/* 1. 默认状态：锐利黑箭头 */
 body {
-    /* 语法解释：url('图片路径') icon的坐标中心点, 后备方案;
-       3 3 表示箭头的尖端在图片的 (3px, 3px) 位置，保证点击精准。
-    */
-    cursor: url('/assets/images/cursor-arrow.svg') 3 3, auto;
+  cursor: url('/assets/images/cursor-arrow.svg') 3 3, auto;
 }
 
-/* 2. 链接状态：现代感小手 */
-/* 选中所有链接、按钮和提交项 */
 a, button, input[type="submit"], input[type="button"], .pointer-cursor {
-    /* 10 2 表示手型食指指尖的大概位置
-    */
-    cursor: url('/assets/images/cursor-pointer.svg') 10 2, pointer;
+  cursor: url('/assets/images/cursor-pointer.svg') 10 2, pointer;
 }
 
-/* 可选：针对文本输入区域，可以保留系统默认的竖线，或者也换成高级样式 */
 input[type="text"], textarea {
-    cursor: text;
+  cursor: text;
 }
 
-
-/* --- 猫咪 Logo 样式 --- */
 .cat-header-logo {
-    height: 40px;       /* 调整猫咪的大小，建议在 35px - 50px 之间 */
-    width: auto;        /* 宽度自动，防止变形 */
-    margin-right: 10px; /* 猫咪和 "Tang Lab" 文字之间的距离 */
-    vertical-align: middle; /* 关键！让猫咪和文字在垂直方向居中对齐 */
-    border-radius: 12px; /* 如果你的图片是方形的，这行代码会把它变成圆形 */
-
-    /* 可选：加一点微互动 */
-    transition: transform 0.3s ease;
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
-/* 当鼠标悬停在标题区域时，猫咪歪头（旋转一下） */
 .site-title:hover .cat-header-logo {
-    transform: rotate(15deg);
+  transform: rotate(15deg);
 }
 
-/* --- 页脚底部小猫彩蛋样式 --- */
-
-.footer-cats-container {
-  display: flex;             /* 横向排列 */
-  justify-content: center;   /* 居中 */
-  gap: 30px;                 /* 猫咪之间的间距 */
-  width: 100%;
-
-  /* 位置调整 */
-  margin-top: 60px;          /* 距离上方正文内容远一点，形成呼吸感 */
-  margin-bottom: -25px;      /* 稍微向下压，让它们看起来是踩在 Footer 的边线上 */
-
-  opacity: 0.5;              /* 半透明，作为彩蛋不要太抢眼，低调的高级 */
-  pointer-events: none;      /* 不阻挡点击 */
+/* 隐藏 minima 默认 Footer */
+.site-footer {
+  display: none;
 }
 
-.footer-cat-svg {
-  width: 50px;               /* 稍微缩小一点，更精致 */
-  height: auto;
-  stroke: #666;              /* 使用中灰色，比纯黑更柔和 */
-  stroke-width: 1.5px;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: all 0.3s ease;
-  pointer-events: auto;      /* 鼠标可以感应 */
-  cursor: pointer;
-}
-
-/* 互动：鼠标放上去变黑、跳动 */
-.footer-cat-svg:hover {
-  transform: translateY(-5px) scale(1.1);
-  stroke: #000;              /* 变回黑色 */
-  opacity: 1;                /* 变不透明 */
-}
-
-/* --- 2D 开屏帷幕样式 (最终修正版) --- */
-#curtain-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-
-  /* ✅ 核心修改：背景图路径已修复，移除多余的 .jpg */
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/images/banner-biology-picture.jpg');
-
-  /* 关键属性：确保图片铺满全屏 */
-  background-size: cover;
-  background-position: center;
-
-  z-index: 99999;
-  display: flex; justify-content: center; align-items: center;
-  color: #ffffff;
-  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-/* 帷幕拉起时的状态 */
-#curtain-overlay.curtain-up {
-  transform: translateY(-100%);
-}
-
-/* 内容容器动画 */
-.curtain-content {
-  text-align: center;
-  animation: fadeInUp 1s ease-out 0.5s backwards;
-}
-
-/* 标题样式 (保留了渐变字效果) */
-.lab-title {
-  font-size: 4rem; font-weight: 800; letter-spacing: 5px; margin-bottom: 10px;
-  text-transform: uppercase;
-  background: linear-gradient(to right, #fff, #a0c4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* 副标题、分割线、描述样式 */
-.lab-subtitle { font-size: 1.5rem; font-weight: 300; opacity: 0.9; margin-bottom: 30px; }
-.lab-divider { width: 60px; height: 3px; background: #a0c4ff; margin: 20px auto; }
-.lab-description { font-size: 1.1rem; opacity: 0.7; margin-bottom: 50px; font-family: sans-serif; }
-
-/* 按钮样式 */
-#enter-button {
-  padding: 15px 40px; background: transparent; border: 2px solid rgba(255, 255, 255, 0.5);
-  color: #fff; font-size: 1.1rem; border-radius: 50px; cursor: pointer;
-  transition: all 0.3s ease; display: flex; align-items: center; gap: 10px; margin: 0 auto;
-}
-
-#enter-button:hover {
-  background: #ffffff; color: #1a1f2c; border-color: #ffffff;
-  transform: translateY(-3px); box-shadow: 0 10px 20px -10px rgba(255,255,255,0.5);
-}
-
-#enter-button:hover .btn-arrow { transform: translateY(3px); }
-.btn-arrow { transition: transform 0.3s ease; }
-
-/* 进场动画定义 */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

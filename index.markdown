@@ -1,97 +1,19 @@
 ---
 layout: default
-header_style: white
+title: Home
 lang: en
+permalink: /
+header_style: white
+description: "Tang Zhantong's personal website - Committed to reducing dependence on and harm to experimental animals through innovative in vitro models."
 ---
 
 <style>
-/* --- 1. 核心魔法：改造导航栏 (仅在首页生效) --- */
+/* --- 首页专用样式（不含公共 Hero/Nav，已提取到 SCSS） --- */
 
-/* 让 Header 绝对定位，覆盖在视频之上 */
-header.site-header {
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent !important; /* 背景透明 */
-    border-bottom: none !important; /* 去掉底部的线 */
-    z-index: 1000; /* 保证它在视频上面 */
-}
-
-/* --- 2. 全屏视频背景 Hero Section --- */
-
-.video-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh; /* 全屏高度 */
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: -60px; /* 抵消顶部间距 */
-    overflow: hidden;
-    background-color: #1a1a2e; /* 深色占位背景 */
-    background-image: url('/assets/video/bg_poster.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-#bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* 保证充满屏幕 */
-}
-
-/* 遮罩层 */
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* 40% 黑色遮罩，提高文字可读性 */
-    z-index: 2;
-    pointer-events: none; /* 让点击穿透 */
-}
-
-/* 标题内容 */
-.video-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    text-align: center;
-    width: 100%;
-    padding: 0 20px;
-    color: white;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: 4px; 
-    margin: 0;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    font-family: "Helvetica Neue", sans-serif;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .hero-title { font-size: 2rem; }
-}
-
-/* --- 3. NEWS 区域 (保持原样，优化间距) --- */
+/* NEWS 区域 */
 .content-container {
     max-width: 900px;
-    margin: 60px auto; /* 上方留出距离 */
+    margin: 60px auto;
     padding: 0 20px;
 }
 
@@ -125,28 +47,183 @@ header.site-header {
     color: #d93025;
     min-width: 130px;
     margin-right: 30px;
-    font-family: monospace; 
+    font-family: monospace;
 }
 
 .news-content {
     color: #444;
 }
+
+/* --- About Me 区域 --- */
+.about-section {
+    max-width: 900px;
+    margin: 80px auto 60px;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-photo {
+    flex-shrink: 0;
+}
+
+.about-photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.about-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.about-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #555 !important;
+    transition: all 0.3s;
+}
+
+.about-links a:hover {
+    border-color: #333;
+    color: #333 !important;
+    transform: translateY(-1px);
+}
+
+/* --- Research Highlights --- */
+.highlights-section {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.highlight-card {
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.highlight-card:hover {
+    border-color: #999;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.highlight-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.highlight-card p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 移动端 */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-links {
+        justify-content: center;
+    }
+}
 </style>
 
 <div class="video-container">
-    <video autoplay muted loop playsinline id="bg-video" poster="/assets/video/bg_poster.jpg">
+    <video autoplay muted loop playsinline id="bg-video" poster="/assets/video/bg_poster.jpg" preload="none">
         <source src="/assets/video/bg.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
-    
     <div class="video-overlay"></div>
-    
     <div class="video-content">
         <h1 class="hero-title">Committed to reducing dependence on and harm to experimental animals!</h1>
     </div>
 </div>
 
-<div class="content-container">
+<!-- About Me -->
+<div class="about-section reveal">
+    <div class="about-photo">
+        <img src="/assets/images/memberzhantong.jpg" alt="Tang Zhantong portrait" loading="lazy">
+    </div>
+    <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hi! I'm <strong>Tang Zhantong</strong>, a master's student at <strong>Southeast University</strong> (School of Medicine), passionate about biology and biomedical engineering. My research focuses on building <em>in vitro</em> models to reduce dependence on experimental animals.</p>
+        <p>I love cats, coding, and exploring the intersection of biology and engineering. Currently seeking PhD opportunities.</p>
+        <div class="about-links">
+            <a href="https://x.com/Newkotang" target="_blank">𝕏 Twitter</a>
+            <a href="https://orcid.org/0009-0007-8038-7506" target="_blank">🔬 ORCID</a>
+            <a href="https://www.youtube.com/@Newko-t2v" target="_blank">▶ YouTube</a>
+            <a href="mailto:zhantongtang@gmail.com">✉ Email</a>
+        </div>
+    </div>
+</div>
+
+<!-- Research Highlights -->
+<div class="highlights-section reveal">
+    <h2 class="section-title">Research Interests</h2>
+    <div class="highlights-grid">
+        <div class="highlight-card hover-lift">
+            <div class="highlight-icon">🫁</div>
+            <h3>Respiratory Diseases</h3>
+            <p>Modeling influenza and respiratory virus infections using advanced in vitro platforms.</p>
+        </div>
+        <div class="highlight-card hover-lift">
+            <div class="highlight-icon">🧫</div>
+            <h3>Organ-on-a-Chip</h3>
+            <p>Developing microfluidic chip systems to simulate organ-level physiology and immune responses.</p>
+        </div>
+        <div class="highlight-card hover-lift">
+            <div class="highlight-icon">🔬</div>
+            <h3>In Vitro Modeling</h3>
+            <p>Creating physiologically relevant cell culture systems as alternatives to animal testing.</p>
+        </div>
+    </div>
+</div>
+
+<!-- NEWS -->
+<div class="content-container reveal">
     <h2 class="section-title">NEWS</h2>
     
     <ul class="news-list">
