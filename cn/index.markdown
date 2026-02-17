@@ -188,6 +188,11 @@ description: "唐展通的个人网站 - 致力于减少对实验动物的依赖
     
     <ul class="news-list">
         <li class="news-item">
+            <span class="news-date">2026-02-16</span>
+            <span class="news-content">2026年2月16日，我们在陕西省咸阳市庆祝中国新年。祝愿新年快乐！</span>
+        </li>
+
+        <li class="news-item">
             <span class="news-date">2026-01-09</span>
             <span class="news-content">唐展通将于1.19日，1.20日参加日本国立遗传学研究所/SOKENDAI遗传学课程的博士入学考试，祝一切顺利！</span>
         </li>

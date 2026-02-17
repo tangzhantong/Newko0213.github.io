@@ -228,6 +228,11 @@ description: "Tang Zhantong's personal website - Committed to reducing dependenc
     
     <ul class="news-list">
         <li class="news-item">
+            <span class="news-date">2026-02-16</span>
+            <span class="news-content">On February 16, 2026, we celebrated Chinese New Year in Xianyang, Shaanxi. Happy New Year!</span>
+        </li>
+
+        <li class="news-item">
             <span class="news-date">2026-01-09</span>
             <span class="news-content">Tang Zhantong will attend the PhD entrance exam at the National Institute of Genetics / SOKENDAI, Japan on Jan 19-20. Best of luck!</span>
         </li>
