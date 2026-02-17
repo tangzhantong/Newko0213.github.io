@@ -18,7 +18,7 @@ description: "Tang Zhantong's Publications - Papers and Patents."
 
 <div class="pub-container reveal">
 
-    <h2 class="pub-section-title">Papers</h2>
+    <h2 class="pub-section-title">Papers <a href="https://pubmed.ncbi.nlm.nih.gov/?term=tang+zhantong&sort=date" target="_blank" rel="noopener noreferrer" class="pub-see-all">See all on PubMed →</a></h2>
     
     <h3 class="pub-year-header">2026</h3>
     

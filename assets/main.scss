@@ -1,6 +1,4 @@
----
----
-@charset "utf-8";
+--- --- @charset "utf-8";
 
 @import "minima";
 
@@ -260,4 +258,19 @@ textarea {
   color: #111;
   text-decoration: underline;
   text-decoration-color: #999;
+}
+
+.pub-see-all {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #888;
+  text-decoration: none;
+  margin-left: 12px;
+  letter-spacing: 0;
+  transition: color 0.2s ease;
+}
+
+.pub-see-all:hover {
+  color: #0070f3;
+  text-decoration: underline;
 }

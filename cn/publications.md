@@ -18,7 +18,7 @@ description: "唐展通的学术论文与发明专利。"
 
 <div class="pub-container reveal">
 
-    <h2 class="pub-section-title">学术论文</h2>
+    <h2 class="pub-section-title">学术论文 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=tang+zhantong&sort=date" target="_blank" rel="noopener noreferrer" class="pub-see-all">全部论文见 PubMed →</a></h2>
     
     <h3 class="pub-year-header">2026</h3>
 
