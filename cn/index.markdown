@@ -155,6 +155,7 @@ description: "唐展通的个人网站 - 致力于减少对实验动物的依赖
             <a href="https://x.com/Newkotang" target="_blank">𝕏 推特</a>
             <a href="https://orcid.org/0009-0007-8038-7506" target="_blank">🔬 ORCID</a>
             <a href="https://www.youtube.com/@Newko-t2v" target="_blank">▶ YouTube</a>
+            <a href="https://www.instagram.com/jetb.rainslicensecrack/" target="_blank">📸 Instagram</a>
             <a href="mailto:zhantongtang@gmail.com">✉ 邮箱</a>
         </div>
     </div>
