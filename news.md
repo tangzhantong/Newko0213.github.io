@@ -26,7 +26,7 @@ header.site-header {
     margin-top: -60px; 
     padding-top: 160px; /* More padding to account for header */
     /* Background Image */
-    background: url("{{ '/assets/images/news_bg.jpg' | relative_url }}") no-repeat center center fixed;
+    background: url("{{ '/assets/images/iOS9BetaWave_Mac.jpg' | relative_url }}") no-repeat center center fixed;
     background-size: cover;
 }
 
