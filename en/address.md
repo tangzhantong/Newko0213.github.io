@@ -19,7 +19,7 @@ description: "Contact Tang Zhantong at Southeast University."
 </style>
 
 <div class="hero-wrapper">
-    <div class="hero-banner" style="background-image: url('/assets/images/seu_sipailou_campus_doudou.jpg');">
+    <div class="hero-banner" style="background-image: url('/assets/images/APP_Mac.jpg');">
         <div class="hero-overlay"></div>
         <h1 class="hero-title">Contact</h1>
     </div>
