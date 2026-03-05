@@ -8,7 +8,7 @@ description: "A photo gallery capturing moments in science and life."
 ---
 
 <div class="hero-wrapper">
-    <div class="hero-banner" style="background-image: url('/assets/images/banner1.jpg');">
+    <div class="hero-banner" style="background-image: url('/assets/images/LIMINAL_I_Mac.jpg');">
         <div class="hero-overlay"></div>
         <h1 class="hero-title">Gallery</h1>
     </div>
