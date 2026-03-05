@@ -97,7 +97,11 @@ description: "Tang Zhantong's research interests in respiratory diseases, organ-
     <div class="project-card reveal">
         <h2 class="project-title">3. NQO1 and Ferroptosis in Hepatocellular Carcinoma</h2>
         <div class="project-desc">
-            <p>Investigating the role of NQO1 in ferroptosis regulation and Sorafenib resistance in hepatocellular carcinoma using single-cell RNA sequencing and spatial transcriptomics.</p>
+            <p>This is my graduation thesis research, which discovered that NQO1 is related to drug resistance. This project has been stopped.</p>
+            <div style="display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap;">
+                <img src="/assets/images/resis_new.jpg" alt="Drug resistance results" style="max-width: 48%; border-radius: 6px; border: 1px solid #eee;">
+                <img src="/assets/images/ferr_1.jpg" alt="Ferroptosis results" style="max-width: 48%; border-radius: 6px; border: 1px solid #eee;">
+            </div>
             <div class="project-tags">
                 <span class="project-tag">NQO1</span>
                 <span class="project-tag">Ferroptosis</span>
