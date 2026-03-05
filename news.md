@@ -26,8 +26,7 @@ header.site-header {
     margin-top: -60px; 
     padding-top: 160px; /* More padding to account for header */
     /* Background Image */
-    background: url("{{ '/assets/images/iOS9BetaWave_Mac.jpg' | relative_url }}") no-repeat center center fixed;
-    background-size: cover;
+    background: #1a1a2e;
 }
 
 /* Semi-transparent overlay to make text readable */
@@ -77,7 +76,8 @@ header.site-header {
 </style>
 
 <div class="news-page-container">
-    <div class="news-overlay">
+    <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;" poster="/assets/video/bg_poster.jpg" preload="none"><source src="/assets/video/bg.mp4" type="video/mp4"></video>
+    <div class="news-overlay" style="position:relative;z-index:1;">
         <h1 style="text-align: center; margin-bottom: 40px;">News</h1>
         <div class="news-list-item">
             <a href="/cny-2026/">

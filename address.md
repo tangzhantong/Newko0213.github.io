@@ -59,7 +59,8 @@ description: "Contact Tang Zhantong - Southeast University, School of Medicine, 
 </style>
 
 <div class="hero-wrapper">
-    <div class="hero-banner" style="background-image: url('/assets/images/APP_Mac.jpg');">
+    <div class="hero-banner" style="background: #1a1a2e; overflow: hidden;">
+        <video autoplay muted loop playsinline style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;transform:translate(-50%,-50%);object-fit:cover;" poster="/assets/video/bg_poster.jpg" preload="none"><source src="/assets/video/bg.mp4" type="video/mp4"></video>
         <div class="hero-overlay"></div>
         <h1 class="hero-title">Contact</h1>
     </div>
