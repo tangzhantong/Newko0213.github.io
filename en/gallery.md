@@ -25,8 +25,8 @@ description: "A photo gallery capturing moments in science and life."
   <div class="gallery-card hover-lift">
     <img src="/assets/images/birthday_2026.jpg" class="gallery-img" alt="Birthday greeting from Southeast University" loading="lazy">
     <div class="gallery-info">
-      <h3 class="gallery-title">生日快樂</h3>
-      <p class="gallery-desc">Feb 13, 2026 | 2026年2月13日，唐展通迎來了自己的26歲生日，東南大學發來了祝福。</p>
+      <h3 class="gallery-title">Happy Birthday</h3>
+      <p class="gallery-desc">Feb 13, 2026 | Tang Zhantong turned 26. Southeast University sent a birthday greeting.</p>
     </div>
   </div>
 
