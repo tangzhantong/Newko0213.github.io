@@ -4,13 +4,6 @@
 {%- include head.html -%}
 
 <body class="{% if page.header_style == 'white' %}page-has-hero header-white{% endif %}">
-    <!-- 交互式粒子背景 -->
-    <div id="canvas-wrapper"
-        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
-        <canvas id="constellation-canvas"></canvas>
-    </div>
-    <script src="/assets/js/constellation.js"></script>
-
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
@@ -36,17 +29,22 @@
         --cursor-dark: default;
         --cursor-light: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 3.5L16.5 28.5L20.5 19.5L28.5 28.5L30.5 26.5L22.5 17.5L30.5 15.5L5.5 3.5Z" fill="white" stroke="black" stroke-width="1"/></svg>') 2 2, auto;
         --font-primary: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+        --font-serif: 'Lora', Georgia, serif;
     }
 
     body {
         background-color: #ffffff;
-        color: #333333;
+        color: #1a1a1a;
         cursor: var(--cursor-dark);
         font-family: var(--font-primary);
     }
 
+    h1, h2, h3 {
+        font-family: var(--font-serif);
+    }
+
     a {
-        color: #333333;
+        color: #1a1a1a;
         text-decoration: none;
         cursor: pointer;
     }
@@ -75,13 +73,13 @@
     .code-container,
     .protocol-container,
     .member-container {
-        color: #333333 !important;
+        color: #1a1a1a !important;
         cursor: var(--cursor-dark) !important;
     }
 
     .page-content a:not(.btn),
     .content-container a:not(.btn) {
-        color: #000000 !important;
+        color: #1a1a1a !important;
     }
 
     /* Footer 内的颜色恢复 */
@@ -109,6 +107,10 @@
 
     .custom-footer .footer-social a:hover svg.instagram {
         fill: #E1306C !important;
+    }
+
+    .custom-footer .footer-social a:hover svg.bilibili {
+        fill: #00A1D6 !important;
     }
 </style>
 

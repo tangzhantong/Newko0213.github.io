@@ -43,8 +43,8 @@ description: "Tang Zhantong's personal website - Committed to reducing dependenc
 }
 
 .news-date {
-    font-weight: 700;
-    color: #d93025;
+    font-weight: 600;
+    color: #888;
     min-width: 130px;
     margin-right: 30px;
     font-family: monospace;
@@ -192,14 +192,10 @@ description: "Tang Zhantong's personal website - Committed to reducing dependenc
         <p>Hi! I'm <strong>Tang Zhantong</strong>, a master's student at <strong>Southeast University</strong> (School of Medicine), passionate about biology and biomedical engineering. My research focuses on building <em>in vitro</em> models to reduce dependence on experimental animals.</p>
         <p>I love cats, coding, artificial intelligence, and exploring the intersection of biology, engineering, and AI. I will graduate from Southeast University in June 2026 and immediately proceed to Guangzhou Laboratory to conduct my doctoral training.</p>
         <div class="about-links">
-            <a href="https://x.com/Newkotang" target="_blank">𝕏 Twitter</a>
+            <a href="mailto:zhantongtang@gmail.com">✉ Email</a>
             <a href="https://orcid.org/0009-0007-8038-7506" target="_blank">🔬 ORCID</a>
-            <a href="https://www.youtube.com/@Newko-t2v" target="_blank">▶ YouTube</a>
-            <a href="https://www.instagram.com/jetb.rainslicensecrack/" target="_blank">📸 Instagram</a>
             <a href="https://scholar.google.com/citations?user=f59aEisAAAAJ&hl=en" target="_blank">🎓 Google Scholar</a>
             <a href="https://www.researchgate.net/profile/Tang-Zhantong" target="_blank">ʀɢ ResearchGate</a>
-            <a href="https://space.bilibili.com/277751628" target="_blank">📺 Bilibili</a>
-            <a href="mailto:zhantongtang@gmail.com">✉ Email</a>
         </div>
     </div>
 </div>

@@ -37,8 +37,8 @@ description: "唐展通的个人网站 - 致力于减少对实验动物的依赖
 }
 
 .news-date {
-    font-weight: 700;
-    color: #d93025;
+    font-weight: 600;
+    color: #888;
     min-width: 130px;
     margin-right: 30px;
     font-family: monospace;
@@ -152,14 +152,10 @@ description: "唐展通的个人网站 - 致力于减少对实验动物的依赖
         <p>你好！我是<strong>唐展通</strong>，<strong>东南大学</strong>医学院硕士研究生，热爱生物学与生物医学工程。我的研究方向聚焦于构建<em>体外</em>模型，以减少对实验动物的依赖。</p>
         <p>我喜欢猫、编程、人工智能，以及探索生物学与工程学和AI的交叉领域。我将于2026年6月从东南大学毕业，并随即前往广州实验室开展我的博士训练。</p>
         <div class="about-links">
-            <a href="https://x.com/Newkotang" target="_blank">𝕏 推特</a>
+            <a href="mailto:zhantongtang@gmail.com">✉ 邮箱</a>
             <a href="https://orcid.org/0009-0007-8038-7506" target="_blank">🔬 ORCID</a>
-            <a href="https://www.youtube.com/@Newko-t2v" target="_blank">▶ YouTube</a>
-            <a href="https://www.instagram.com/jetb.rainslicensecrack/" target="_blank">📸 Instagram</a>
             <a href="https://scholar.google.com/citations?user=f59aEisAAAAJ&hl=en" target="_blank">🎓 谷歌学术</a>
             <a href="https://www.researchgate.net/profile/Tang-Zhantong" target="_blank">ʀɢ ResearchGate</a>
-            <a href="https://space.bilibili.com/277751628" target="_blank">📺 Bilibili</a>
-            <a href="mailto:zhantongtang@gmail.com">✉ 邮箱</a>
         </div>
     </div>
 </div>

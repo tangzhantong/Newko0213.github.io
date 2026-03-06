@@ -22,11 +22,16 @@ description: "唐展通的科研方向：呼吸系统疾病、器官芯片与体
 
 .project-title {
     font-size: 1.8rem;
-    color: #333;
+    color: #1a1a1a;
     margin-bottom: 20px;
-    border-left: 5px solid #4a90e2;
-    padding-left: 15px;
+    padding-top: 8px;
     line-height: 1.3;
+    font-family: 'Lora', Georgia, serif;
+}
+
+.project-card:first-child {
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
 }
 
 .project-desc {
