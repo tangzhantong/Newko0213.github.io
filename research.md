@@ -53,16 +53,17 @@ description: "Tang Zhantong's research interests in respiratory diseases, organ-
 
 .project-img-row {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     margin-top: 20px;
+    max-width: 560px;
 }
 
 .project-img-row img {
     flex: 1;
-    max-width: calc(50% - 8px);
-    max-height: 200px;
+    max-width: calc(50% - 6px);
+    height: 130px;
     object-fit: cover;
-    border-radius: var(--radius-card, 12px);
+    border-radius: 8px;
 }
 
 @media (max-width: 480px) {
