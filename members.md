@@ -27,7 +27,7 @@ description: "Meet the members of Tang Zhantong's lab family - researchers, engi
     width: 200px;
     height: 260px;
     margin: 0 auto;
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     cursor: pointer;
@@ -139,7 +139,7 @@ description: "Meet the members of Tang Zhantong's lab family - researchers, engi
 <h2 class="section-title reveal">Family</h2>
 <div class="member-container reveal">
 
-  <div class="member-card hover-lift">
+  <div class="member-card">
     <div class="member-img-wrapper">
       <img src="/assets/images/tang_qingdao0126.jpg" alt="Tang Zhantong portrait at Qingdao" class="member-img" loading="lazy">
       <div class="member-overlay">
@@ -168,7 +168,7 @@ description: "Meet the members of Tang Zhantong's lab family - researchers, engi
     </div>
   </div>
 
-  <div class="member-card hover-lift">
+  <div class="member-card">
     <div class="member-img-wrapper">
       <img src="/assets/images/memberhaoyu.jpg" alt="Haoyu portrait" class="member-img" loading="lazy">
       <div class="member-overlay">
@@ -187,7 +187,7 @@ description: "Meet the members of Tang Zhantong's lab family - researchers, engi
 <h2 class="section-title reveal">Mascots</h2>
 <div class="member-container reveal">
 
-  <div class="member-card hover-lift">
+  <div class="member-card">
     <div class="member-img-wrapper">
       <img src="/assets/images/memberdabao.jpg" alt="Dabao the cat mascot" class="member-img" loading="lazy">
       <div class="member-overlay">
@@ -201,7 +201,7 @@ description: "Meet the members of Tang Zhantong's lab family - researchers, engi
     <h3 class="member-name">Dabao</h3>
   </div>
 
-  <div class="member-card hover-lift">
+  <div class="member-card">
     <div class="member-img-wrapper">
       <img src="/assets/images/songrong_0126.jpg" alt="Songrong the cat mascot" class="member-img" loading="lazy">
       <div class="member-overlay">
