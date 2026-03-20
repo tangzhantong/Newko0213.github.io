@@ -21,28 +21,69 @@ description: "Meet the members of Tang Zhantong's lab family - researchers, engi
 
 .member-card { text-align: center; width: 240px; }
 
-.member-img {
-    width: 160px;
-    height: 160px;
+/* 图片容器：相对定位，用于承载 overlay */
+.member-img-wrapper {
+    position: relative;
+    width: 200px;
+    height: 260px;
+    margin: 0 auto;
     border-radius: 12px;
-    object-fit: cover;
-    border: 4px solid #fff;
+    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.member-img-wrapper:hover .member-img {
+    transform: scale(1.05);
+}
+
+/* 悬浮覆盖层 */
+.member-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 128, 185, 0.85);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.member-img-wrapper:hover .member-overlay {
+    opacity: 1;
+}
+
+.member-overlay .overlay-info {
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.member-overlay .overlay-info strong {
+    color: rgba(255,255,255,0.9);
 }
 
 .member-name {
-    margin-top: 20px;
+    margin-top: 16px;
     margin-bottom: 8px;
     font-size: 1.4rem;
     color: #333;
-}
-
-.member-info {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.7;
-    text-align: left;
-    padding-left: 10px;
 }
 
 .social-links {
@@ -99,7 +140,17 @@ description: "Meet the members of Tang Zhantong's lab family - researchers, engi
 <div class="member-container reveal">
 
   <div class="member-card hover-lift">
-    <img src="/assets/images/tang_qingdao0126.jpg" alt="Tang Zhantong portrait at Qingdao" class="member-img" loading="lazy">
+    <div class="member-img-wrapper">
+      <img src="/assets/images/tang_qingdao0126.jpg" alt="Tang Zhantong portrait at Qingdao" class="member-img" loading="lazy">
+      <div class="member-overlay">
+        <div class="overlay-info">
+          <strong>Research:</strong> Biology, Biomedical Engineering<br>
+          <strong>School:</strong> Southeast University<br>
+          <strong>Email:</strong> zhantongtang@gmail.com<br>
+          <strong>Hobby:</strong> Cats, Cooking (Definitely NOT work!)
+        </div>
+      </div>
+    </div>
     <h3 class="member-name">Tang Zhantong</h3>
     <div class="social-links">
       <a href="https://x.com/Newkotang" target="_blank" class="social-icon" title="X (Twitter)">
@@ -115,22 +166,20 @@ description: "Meet the members of Tang Zhantong's lab family - researchers, engi
         <svg class="youtube" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
       </a>
     </div>
-    <div class="member-info">
-      <strong>Research:</strong> Biology, Biomedical Engineering<br>
-      <strong>School:</strong> Southeast University<br>
-      <strong>Email:</strong> zhantongtang@gmail.com<br>
-      <strong>Hobby:</strong> Cats, Cooking (Definitely NOT work!)
-    </div>
   </div>
 
   <div class="member-card hover-lift">
-    <img src="/assets/images/memberhaoyu.jpg" alt="Haoyu portrait" class="member-img" loading="lazy">
-    <h3 class="member-name">Haoyu</h3>
-    <div class="member-info">
-      <strong>Research:</strong> Atmospheric Science<br>
-      <strong>School:</strong> Ocean University of China<br>
-      <strong>Hobby:</strong> Gym, Cats, Cooking (?)
+    <div class="member-img-wrapper">
+      <img src="/assets/images/memberhaoyu.jpg" alt="Haoyu portrait" class="member-img" loading="lazy">
+      <div class="member-overlay">
+        <div class="overlay-info">
+          <strong>Research:</strong> Atmospheric Science<br>
+          <strong>School:</strong> Ocean University of China<br>
+          <strong>Hobby:</strong> Gym, Cats, Cooking (?)
+        </div>
+      </div>
     </div>
+    <h3 class="member-name">Haoyu</h3>
   </div>
 
 </div>
@@ -139,23 +188,31 @@ description: "Meet the members of Tang Zhantong's lab family - researchers, engi
 <div class="member-container reveal">
 
   <div class="member-card hover-lift">
-    <img src="/assets/images/memberdabao.jpg" alt="Dabao the cat mascot" class="member-img" loading="lazy">
-    <h3 class="member-name">Dabao</h3>
-    <div class="member-info">
-      <strong>Position:</strong> Mascot<br>
-      <strong>DOB:</strong> May 6, 2024<br>
-      <strong>Personality:</strong> Clingy, Tummy No-Touch!
+    <div class="member-img-wrapper">
+      <img src="/assets/images/memberdabao.jpg" alt="Dabao the cat mascot" class="member-img" loading="lazy">
+      <div class="member-overlay">
+        <div class="overlay-info">
+          <strong>Position:</strong> Mascot<br>
+          <strong>DOB:</strong> May 6, 2024<br>
+          <strong>Personality:</strong> Clingy, Tummy No-Touch!
+        </div>
+      </div>
     </div>
+    <h3 class="member-name">Dabao</h3>
   </div>
 
   <div class="member-card hover-lift">
-    <img src="/assets/images/songrong_0126.jpg" alt="Songrong the cat mascot" class="member-img" loading="lazy">
-    <h3 class="member-name">Songrong</h3>
-    <div class="member-info">
-      <strong>Position:</strong> Mascot<br>
-      <strong>School:</strong> Ocean University of China<br>
-      <strong>Personality:</strong> Clingy (Super!)
+    <div class="member-img-wrapper">
+      <img src="/assets/images/songrong_0126.jpg" alt="Songrong the cat mascot" class="member-img" loading="lazy">
+      <div class="member-overlay">
+        <div class="overlay-info">
+          <strong>Position:</strong> Mascot<br>
+          <strong>School:</strong> Ocean University of China<br>
+          <strong>Personality:</strong> Clingy (Super!)
+        </div>
+      </div>
     </div>
+    <h3 class="member-name">Songrong</h3>
   </div>
 
 </div>
