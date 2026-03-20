@@ -41,6 +41,16 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* Logo 在深色背景下反白 */
+.header-white .logo-img {
+    filter: brightness(0) invert(1);
+}
+
+/* 滚动后恢复深色 logo */
+.page-has-hero header.site-header.scrolled .logo-img {
+    filter: none;
+}
+
 .header-white .site-nav .menu-icon svg path {
     fill: #ffffff !important;
 }

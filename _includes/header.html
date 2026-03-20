@@ -1,8 +1,8 @@
 <header class="site-header {% if page.header_style == 'white' %}header-white{% endif %}" role="banner">
 
   <div class="wrapper">
-    <a class="site-title" rel="author" href="/">
-      <span>{{ site.title | escape }}</span>
+    <a class="site-title site-logo" rel="author" href="/">
+      <img src="/assets/images/logo.svg" alt="{{ site.title | escape }}" class="logo-img" />
     </a>
     {%- if site.header_pages.size > 0 -%}
     <nav class="site-nav">

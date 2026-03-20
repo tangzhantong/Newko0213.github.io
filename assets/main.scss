@@ -93,6 +93,23 @@ img {
   text-decoration: none;
 }
 
+/* Logo in header */
+.site-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.logo-img:hover {
+  opacity: 0.7;
+}
+
 /* Custom cursors removed: use native system cursors (Apple convention) */
 
 .cat-header-logo {
